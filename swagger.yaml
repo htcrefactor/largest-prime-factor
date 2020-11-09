@@ -1,34 +1,32 @@
 openapi: 3.0.0   # Open api version
 
 info:   # Set basic infomation
-  title: your-swagger-example
-  version: 0.1.1
+  title: largest-prime-factor
+  version: 1.0.0
 
 servers:   # Set your server endpoint
-  - url: https://${BRANCH_NAME}-${REPO_NAME}-${GITHUB_USER_NAME}.endpoint.ainize.ai
+  - url: https://master-largest-prime-factor-htcrefactor.endpoint.ainize.ai
 
 paths:
-  /path/to/get/method:   # GET method path
+  /:   # GET method path
     get:
-      summary: your get method
-      description: your get method's description
+      summary: Returns largest prime factor
+      description: Returns largest prime factor
       parameters:   # Set parameter values here
-        - name: param1   # Set parameter name
+        - name: number   # Set parameter name
           in: query   # Select amongst query, header, path, and cookie
           required: true
-          allowReserved: true   # Option for percent-encoding, default; false 
+          allowReserved: false   # Option for percent-encoding, default; false
           schema:
             type: string
       responses:   # Set response
         '200':
           description: Successful Response
           content:   # Descriptions of potential response payloads (optional)
-            application/json:
+            text/plain:
               schema:   # Set data types
                 type: object
-                properties:
-                  score:
-                    type: number
+
         '400':
           description: Bad Request Error
         '500':
@@ -37,3 +35,4 @@ paths:
           description: Server is not ready
         default: 
           description: Unexpected Error 
+ 
