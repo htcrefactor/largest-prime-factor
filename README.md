@@ -1,8 +1,7 @@
-
-
 # largest-prime-factor
 A simple web server that returns the largest prime factor of a given number.
 
+<br>
 ## How to Use
 ### 1. Use Ainized Build (EASY)
 #### Run on Ainize
@@ -11,6 +10,7 @@ A simple web server that returns the largest prime factor of a given number.
 #### Public Address
 `https://master-largest-prime-factor-htcrefactor.endpoint.ainize.ai/?number=${YOUR_NUMBER}`
 
+<br>
 ### 2. Manual Build (DIFFICULT)
 #### Docker Build
 `docker build -t largest-prime-factor .`
@@ -21,5 +21,6 @@ A simple web server that returns the largest prime factor of a given number.
 #### Querying Server
 `http://localhost:80/?number=${YOUR_NUMBER}`
 
+<br>
 ## References
 - [Ainize-Team : Primality Test Example](https://github.com/ainize-team/ainize-run-primality-test-example)
